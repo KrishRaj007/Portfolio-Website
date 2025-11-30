@@ -23,6 +23,18 @@
      <h2>About Me</h2>
      <p>I am a B.Tech Computer Science Engineering student at KR Mangalam University. I'm enthusiast about Coding and Technology. I enjoy exploring new tools, building creative projects, and continuously learning to improve my skills in Python, SQL, and Machine Learning.</p>
      </section>
+
+     <hr>
+
+     <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-container">
+    <span class="skill-item">Java</span>
+    <span class="skill-item">SQL</span>
+    <span class="skill-item">Python</span>
+    <span class="skill-item">HTML</span>
+    <span class="skill-item">CSS</span>
+</div>
      
      <hr>
      
@@ -69,6 +81,30 @@
         <button type="submit">Submit Feedback</button>
     </form>
     </section>
+    <button id="backToTopBtn" title="Go to top">Back To Top</button>
+
+    <script>
+        let backToTopBtn = document.getElementById("backToTopBtn");
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        }
+
+        backToTopBtn.addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        scrollFunction();
+    </script>
 
 </body>
 </html>
